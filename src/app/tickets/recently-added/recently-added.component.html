@@ -1,0 +1,73 @@
+<div class="w-100 rounded p-3 d-flex"><h3><b>Recently Added</b></h3></div>
+<div class="vessel p-3">
+    <div class=" body rounded">
+        <div class="middle p-2 table-container">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>DESCRIPTION</th>
+                    <th>RAISED_BY</th>
+                    <th>ASSIGNED_TO</th>
+                    <th>CREATED_BY</th>
+                    <th>UPDATED_AT</th>
+                    <th>RESOLVED_AT</th>
+                    <th>CLOSED_AT</th>
+                    <th>REASON</th>
+                    <th>CLOSED_BY</th>
+                    <th>TICKET_STATUS</th>
+                    <th>CHANGED_BY</th>
+                    <th>COMMENTS</th>
+                    <!-- <th>STATUS</th> -->
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of allData let i=index">
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.prob_desc}}</td>
+                    
+        
+                    <td>{{item.raised_by}}</td>
+        
+                    <td>{{item.assigned_to}}</td>
+                    <td>{{item.created_by}}</td>
+        
+                    <td>{{item.updated_at}}</td>
+        
+                    <td>{{item.resolved_by}}</td>
+                    <td>{{item.Closed_at}}</td>
+        
+                    <td>{{item.reasone}}</td>
+                    <td>{{item.closed_by}}</td>
+                    <td>{{item.ticket_status}}</td>
+                    <td>{{item.changed_by}}</td>
+                    <td>{{item.comment}}</td>
+                    <!-- <td>{{item.status}}</td> -->
+                    <td>
+                        <div class="d-flex">
+                            <button mat-mini-fab color="warn"><i class="fa fa-edit"></i></button>&nbsp;&nbsp;
+                            <button style="border: none; background-color: transparent;"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr *ngIf="allData.length==0">No data found</tr>
+                  <!-- <tr>
+                    <th scope="row">2</th>
+                    <td>WORLD SECURITY CHECK</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr> -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

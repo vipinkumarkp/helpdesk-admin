@@ -1,0 +1,14 @@
+.table-container{
+    /* Set a fixed width for the container or use a percentage value */
+  width: 100%; /* You can adjust this as needed */
+  /* Add a horizontal scrollbar when the table overflows */
+  overflow-x: auto;
+}
+table {
+    /* Set a minimum width for the table to ensure it doesn't collapse */
+    min-width: 100%; /* You can adjust this as needed */
+    /* Add any other table styling here */
+  }
+  .body{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}

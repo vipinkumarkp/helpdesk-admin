@@ -1,0 +1,34 @@
+
+.body{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Styles for the custom select */
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the select box */
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+}
+
+/* Style the arrow pseudo-element */
+.custom-select::after {
+    content: '\25BC'; /* Unicode down arrow character */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allow user interaction with the select, not the arrow */
+}

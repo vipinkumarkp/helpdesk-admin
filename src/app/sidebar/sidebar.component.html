@@ -1,0 +1,85 @@
+<div class="side-nav-content">
+    <ul class="nav-list" [ngClass]="{'nav-list-open': sideNavStatus}">
+        <li class="nav-list-item" routerLink="" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-dashboard"></i>
+            <span>
+                <a>Dashboard</a>
+            </span>
+        </li>
+        <li class="nav-list-item dropdown">
+            <i class="fa-solid fa-ticket"></i>
+            <span>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ticket</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a routerLink="/ticket" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">All Tickets</a></li>
+                    <li><a routerLink="/Unassigned" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">Un Assigned</a></li>
+                    <li><a routerLink="/on_hold" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">On Hold</a></li>
+                    <li><a routerLink="/over_due" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">Over Due</a></li>
+                    <li><a routerLink="/open_ticket" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">Opened</a></li>
+                    <li><a routerLink="/recently_added" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">Recently Added</a></li>
+                    <!-- <li><a routerLink="/ticket_response" id="my-icon"  [routerLinkActive]="'active'" class="dropdown-item" href="">Response</a></li> -->
+                </ul>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/asset" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-book"></i>
+            <span>
+                <a>Assets</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/users" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-user"></i>
+            <span>
+                <a>Users</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/category" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>
+                <a>category</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/subcategory" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>
+                <a>SubCatgory</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/department" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-paperclip"></i>
+            <span>
+                <a>Department</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/brand" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-bars"></i>
+            <span>
+                <a>Brand</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/faq" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-exclamation"></i>
+            <span>
+                <a>FAQs</a>
+            </span>
+        </li>
+        <li class="nav-list-item" routerLink="/knowledgebase" [routerLinkActive]="'active'">
+            <i class="fa-solid fa-list"></i>
+            <span>
+                <a>Knowledgebase</a>
+            </span>
+        </li>
+    </ul>
+</div>
+
+<!-- <mat-select class="mt-4" placeholder="AllTicket" style="font-size: 20px; font-weight: 600;">
+    <mat-option routerLink="/ticket" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>All Tickets</b></mat-option>
+    <mat-option routerLink="/Unassigned" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>Unassigned</b></mat-option>
+    <mat-option routerLink="/on_hold" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>On Hold</b></mat-option>
+    <mat-option routerLink="/over_due" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>Over Due</b></mat-option>
+    <mat-option routerLink="/open_ticket" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>Opened</b></mat-option>
+    <mat-option routerLink="/recently_added" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>Recently Added</b></mat-option>
+    <mat-option routerLink="/ticket_response" id="my-icon"  [routerLinkActive]="'active'" class="Active_Buttons"><b>Response</b></mat-option>
+
+</mat-select> -->
+

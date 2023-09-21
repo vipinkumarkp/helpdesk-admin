@@ -1,0 +1,89 @@
+<div class="header p-3 bg-light bg rounded justify-content-between d-flex"><h3><b>All Sub Categories</b></h3><span><button style="color: white;" *ngIf="isEdit == false" (click)="show()" class="btn btn-info"><i class="fa fa-add"></i>&nbsp;New Sub Catergory</button></span>
+</div>
+<div class="vessel mt-3" *ngIf="isEdit == true">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="body rounded">
+                <div class="header p-2 bg-light rounded-top">
+                    <b><b *ngIf="Edit == true">Edit&nbsp;&nbsp;</b>Category</b>
+                </div>
+                <div class="fields p-3 mt-2 mb-2">
+                    <div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="custom-select d-flex">
+                                    <label class="mt-2" for="select">Category:</label>&nbsp;&nbsp;
+                                    <select id="subcategory" [(ngModel)]="name">
+                                        <option *ngFor="let i of SUBCATEGORY" [value]="i.namedata">{{i.namedata}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="d-flex">
+                        <label for="" class="mt-2">SubCategory:</label>&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="subname" [(ngModel)]="Subname">
+                    </div>
+                </div>
+                <div class="buttons p-2 bg-light rounded-bottom">
+                    <button mat-raised-button (click)="add()" color="primary">Save</button>
+                    <button mat-raised-button class="mx-1" (click)="cancel()" color="warn" >Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="vessel_1 p-3" *ngIf="isEdit == false" style="width: auto;">
+    <div class=" body rounded" >
+        <div class="header p-2 bg-light rounded-top">
+        </div>
+        <div class="middle p-2" >
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th></th><th></th><th></th><th></th>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                    <th scope="col">Category</th>
+                    <th></th><th></th>
+                    <th scope="col">ACTION</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of allData let i=index">
+                    <th scope="row">#</th>
+                    <td></td><td></td>
+                    <td></td><td></td>
+                    <td>{{item.name}}</td>
+                    <td></td>
+                    <td>{{item.subname}}</td>
+                    <td></td><td></td>
+                    <td colspan="3">
+                        <div class="d-flex">
+                            <button  mat-raised-button color="primary" (click)="update(i)">Edit</button>&nbsp;
+                            <button mat-raised-button color="warn" (click)="remove(i)">Delete</button>
+                            
+                        </div>
+                    </td>
+                  </tr>
+                  <tr *ngIf="allData.length==0">No data found</tr>
+                  <!-- <tr>
+                    <th scope="row">2</th>
+                    <td>WORLD SECURITY CHECK</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr> -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
